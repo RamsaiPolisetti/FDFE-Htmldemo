@@ -1,21 +1,27 @@
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
+function App() 
+{
+  const [message, setMessage] = useState("");
 
-function App() {
-  
+  // Fetch data from backend
+  useEffect(() => {
+  axios.get("http://localhost:5000")
+    .then((response) => {
+      setMessage(response.data.message); //  read JSON property
+    })
+    .catch((error) => {
+      console.error("Error fetching data:", error);
+    });
+}, []);
+
   return (
-    <div>
-      
-        Demonstration about html formateted
-        <h1>Welcome to klu</h1>
-        <h2>welcome to klu</h2>
-        <h3>Welcome to klu</h3>
-      <p>The HTML  tag is a fundamental element used to define a paragraph of text within a web page. It is a block-level element, meaning it typically starts on a new line and occupies the full available width of its parent container.The HTML  tag is a fundamental element used to define a paragraph of text within a web page. It is a block-level element, meaning it typically starts on a new line and occupies the full available width of its parent container.</p>
-      <a href="">welcome to klu</a> <br/>
-      <a href="">welcome to klu -erp</a> <br/>
-      <a href="">welcome to w3 school</a> <br/>
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h1>Front end says:React with Express framework Example</h1>
+      <p>Backend says: {message}</p>
     </div>
-       
-  )
+  );
 }
 
-export default App
+export default App;
