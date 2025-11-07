@@ -1,18 +1,13 @@
-const express = require("express");
-const cors = require("cors");
+const http = require("http");
 
-const app = express();
-const PORT = 5000;
-
-// Middleware
-app.use(cors());
-app.use(express.json());
-
-// Basic Route
-app.get("/", (req, res) => {
-  res.send("welcome to React with express framework");
+const server = http.createServer((req, res) => {
+  res.writeHead(200, {
+    "Content-Type": "application/json",
+    "Access-Control-Allow-Origin": "*",
+  });
+  
+  const response = { message: "welcome to React+Node.js session for Backend" };
+  res.end(JSON.stringify(response)); //  Send JSON
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+server.listen(3000, () => console.log("Server running on port 3000")); 
