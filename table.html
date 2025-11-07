@@ -1,0 +1,104 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Table Element Demo </title>
+    <style>
+        h1{
+           text-align: center;
+        }
+        table{
+            background-color: aqua;
+            text-align: center;
+        }
+        th{
+            background-color: red;
+        }
+        tfoot td{
+            background-color: red;
+        }
+        caption{
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Result</h1>
+    <table border="1" align="center">
+    
+        <thead>
+            <caption>
+                student marks report
+            </caption>
+            <tr>
+                <th rowspan="2">SID </th>
+                <th rowspan="2">SNmae</th>
+                <th colspan="3">Marks</th>
+                <th rowspan="2">Total </th>
+                <th rowspan="2">GRADE </th>
+            </tr>
+            <tr>
+                <th>java</th>
+                <th>python</th>
+                <th>Full stack</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                 <td>Anu</td>
+                  <td>100</td>
+                   <td>80</td>
+                    <td>70</td>
+                     <td>250</td>
+                      <td>A</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                 <td>Balu</td>
+                  <td>100</td>
+                   <td>70</td>
+                    <td>80</td>
+                     <td>250</td>
+                      <td>A</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                 <td>Ram</td>
+                  <td>100</td>
+                   <td>70</td>
+                    <td>80</td>
+                     <td>250</td>
+                      <td>A</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                 <td>raju</td>
+                  <td>100</td>
+                   <td>70</td>
+                    <td>80</td>
+                     <td>250</td>
+                      <td>A</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                 <td>raghu</td>
+                  <td>100</td>
+                   <td>80</td>
+                    <td>70</td>
+                     <td>250</td>
+                      <td>A</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5">Average</td>
+                <td>250</td>
+                <td>-</td>
+
+            </tr>
+        </tfoot>
+    </table>
+    
+</body>
+</html>
